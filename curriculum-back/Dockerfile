@@ -4,4 +4,4 @@ COPY curriculum-back/package*.json ./
 RUN npm install
 COPY curriculum-back ./
 RUN ls -l
-CMD ["npm", "run", "prod"]
+CMD ["npm", "run", "prod" ]
