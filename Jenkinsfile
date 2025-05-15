@@ -6,8 +6,8 @@ pipeline {
         git(url: 'https://github.com/raouf21-dev/curriculum-app', branch: 'dev')
       }
     }
-
     stage('Logs') {
+
       parallel {
         stage('Logs') {
           steps {
@@ -20,7 +20,8 @@ pipeline {
             sh 'cd curriculum && npm i'
           }
         }
-
+      steps {
+        sh 'ls -la'
       }
     }
 
