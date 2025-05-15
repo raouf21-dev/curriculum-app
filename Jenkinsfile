@@ -30,6 +30,6 @@ pipeline {
         sh 'docker build -f curriculum-front//Dockerfile .'
       }
     }
-
+}
   }
 }
