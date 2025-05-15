@@ -1,4 +1,5 @@
 pipeline {
+
   agent any
   stages {
     stage('Checkout Code') {
@@ -14,7 +15,6 @@ pipeline {
             sh 'ls -la'
           }
         }
-
         stage('Front-end install packages') {
           steps {
             sh 'cd curriculum && npm i'
@@ -24,12 +24,10 @@ pipeline {
         sh 'ls -la'
       }
     }
-
     stage('Build') {
       steps {
         sh 'docker build -f curriculum-front//Dockerfile .'
       }
     }
-}
   }
 }
